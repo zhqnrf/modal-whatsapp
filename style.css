@@ -123,7 +123,7 @@ input[type="text"]:focus {
 
 #closeContainer {
     position: fixed;
-    bottom: 500px;
+    bottom: 505px;
     right: 20px;
     z-index: 1100;
 }
