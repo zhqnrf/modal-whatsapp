@@ -107,11 +107,6 @@ input[type="text"]:focus {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media (min-width:1240px) {
-    .popup-2 {
-        top: 60px;
-    }
-}
 
 .popup-1 {
     width: 260px;
@@ -126,9 +121,7 @@ input[type="text"]:focus {
 }
 
 
-.btn-close {
-    display: none;
-}
+
 
 #closeContainer {
     position: fixed;
@@ -147,4 +140,45 @@ input[type="text"]:focus {
     font-size: 30px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.popup,
+#closeContainer {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.popup.fade-in,
+#closeContainer.fade-in {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.shake {
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
